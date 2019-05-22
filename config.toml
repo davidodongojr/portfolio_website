@@ -1,0 +1,81 @@
+baseURL = "https://davidodongojr.rbind.io/"
+languageCode = "en-us"
+title = "Data Scientist"
+theme = "timer-hugo"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+# We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
+
+# Site Menus
+[menu]
+    # Navbar Menus
+    [[menu.nav]]
+        name    = "About"
+        url     = "/about"
+        weight  = 2
+    [[menu.nav]]
+        name    = "Services"
+        url     = "/service"
+        weight  = 3
+    #[[menu.nav]]
+     #   name    = "Gallery"
+      #  url     = "/gallery"
+       # weight  = 4
+    [[menu.nav]]
+        name    = "Blog"
+        url     = "/blog"
+        weight  = 5
+    [[menu.nav]]
+        name    = "Contact"
+        url     = "/contact"
+        weight  = 6
+
+# Site Params
+[params]
+    home = "Home"
+    logo = "images/odj.png"
+    dateFormat = "6 January 2006"
+    # Meta data
+    description = "Airspace Hugo theme"
+    author = "David Odongo"
+    # Google Analitycs
+    googleAnalitycsID = "UA-139421791-1"
+
+    # Banner Section
+    [params.banner]
+        enable  = true
+        bgImage = "images/slider.jpg"
+        heading = "HI, MY NAME IS DAVID & I AM A"
+        description = "WITH OVER 5 YEARS EXPERIENCE, I'VE OCCUPIED MANY ROLES INCLUDING DATA COORDINATOR, ANALYST, AND RESEARCH ASSISTANT. THIS SITE SHOWCASES HOW I CAN BE OF SERVICE TO YOU."
+        btn     = true
+        btnText = "Download CV"
+        btnURL  = "https://drive.google.com/file/d/1NTe1bsXPOooIVRWie5HRUq4lPVjUtYTU/view?usp=sharing/"
+        [[params.banner.flipText]]
+            title   = "DATA SCIENTIST"
+        [[params.banner.flipText]]
+            title   = "DATA ANALYST"
+        [[params.banner.flipText]]
+            title   = "STATISTICIAN"
+
+    # Homepage About Section
+    [params.about]
+        enable  = true
+        title   = "ABOUT ME"
+        content = "Hello, I’m a Data Scientist from Kampala, Uganda. My vision is to see every business (Profit/Non-profit) in Africa have a well developed data strategy. <br> <br> My pillars of success are based on Analytics, IT, Business and Communication"
+        image   = "images/about/about.jpg"
+
+    # Call to Action
+    [params.cta]
+        enable  = true
+        title   = "CONTACT ME"
+        content = "Contact me if you need assistance in developing or fine-tuning your data strategy. Let's work together to derive actionable insights from your data"
+        btnText = "Contact me"
+        btnURL  = "/contact"
+
+    # Portfolio Section On Homepage
+    [params.portfolio]
+        enable  = true
+        title   = "Past Consultancies"
+        subtitle= "These are some of the previous data consultancy jobs i have undertaken."
+
+

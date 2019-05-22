@@ -1,0 +1,34 @@
+enable  : true
+title   : Services that i offer.
+subtitle: >
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, <br> quasi dolores numquam dolor vero ex, tempora commodi      repellendus quod laborum.
+item    :
+  - icon  : ion-ios-lightbulb-outline
+    title : Data Strategy.
+    description : >
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+
+  - icon  : ion-stats-bars
+    title : Data Analytics.
+    description : >
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+
+  - icon  : ion-android-globe
+    title : Spatial Analysis.
+    description : >
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+
+  - icon  : ion-android-apps
+    title : Data Management Systems.
+    description : >
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+
+  - icon  : ion-university
+    title : Capacity building.
+    description : >
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+  
+  - icon  : ion-android-textsms
+    title : Consulting.
+    description : >
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
