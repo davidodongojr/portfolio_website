@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://davidodongojr.rbind.io/"
 languageCode = "en-us"
 title = "Data Scientist"
 theme = "timer-hugo"
@@ -36,10 +36,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     logo = "images/odj.png"
     dateFormat = "6 January 2006"
     # Meta data
-    description = "David Odongo"
+    description = "David Odongo's (pronounced odong) website and blog which reflects his thoughts on data science and showcases his expertise as a consultant. His strengths in data science include : predictive analysis, data mining, geospatial and survey analysis,  data strategy, and research."
     author = "David Odongo"
     # Google Analitycs
-    #googleAnalitycsID = "UA-139421791-1"
+    googleAnalitycsID = "UA-139421791-1"
 
     # Banner Section
     [params.banner]

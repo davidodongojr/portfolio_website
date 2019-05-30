@@ -1,20 +1,20 @@
 enable  : true
 title   : About Me.
 description: >
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequun. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Hi! My name is David Odongo. I am a Data Scientist with extensive experience in applying rigorous statistical methods to real world data problems. I am incredibly passionate about helping organisations and individauls to derive value from the large amounts of data in their possession.
   <br>
   <br>
-  Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+  When I am not working on data, you can find me at home playing with my daughter OR making my wife laugh OR watching rugby at the local rugby grounds. Contact me on email : <b> davidodongojr@gmail.com OR phone: 0782122022
 image   : images/about/about-company.jpg
 aboutItem:
   - title : Why Choose Me
     description: > 
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+      I am naturally a problem solver who will turn the questions you direct at your data into actionable insights. I will help you use your data to highlight your achevements and efforts as an organisation or individual. My core values are: critical thinking,  honesty, accountability, and time-consciousness       
 
   - title : What You Get
     description: > 
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+      Reports, Business intelligence dashboards with actionable insights, excellent visualisations, a clear understanding of your target population, and value from your data. With these insights, you also get an understanding of the effects of your interventions backed up by statistical evidence and research.                                  
 
-  - title : Meet The Energy
+  - title : Meet me
     description: > 
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+      Lets arrange a meetup to discuss how i can help you use your data to achieve desired growth. Click on my contact page to send me an email. I look forward to working with you. My email is davidodongojr@gmail.com and phone number is +256782122022
