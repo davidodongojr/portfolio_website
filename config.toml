@@ -1,4 +1,4 @@
-baseURL = "https://davidodongojr.rbind.io/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Data Scientist"
 theme = "timer-hugo"
@@ -24,11 +24,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [[menu.nav]]
         name    = "Blog"
         url     = "/blog"
-        weight  = 5
+        weight  = 4
     [[menu.nav]]
         name    = "Contact"
         url     = "/contact"
-        weight  = 6
+        weight  = 5
 
 # Site Params
 [params]
@@ -36,10 +36,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     logo = "images/odj.png"
     dateFormat = "6 January 2006"
     # Meta data
-    description = "Airspace Hugo theme"
+    description = "David Odongo"
     author = "David Odongo"
     # Google Analitycs
-    googleAnalitycsID = "UA-139421791-1"
+    #googleAnalitycsID = "UA-139421791-1"
 
     # Banner Section
     [params.banner]
@@ -61,7 +61,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [params.about]
         enable  = true
         title   = "ABOUT ME"
-        content = "Hello, I’m a Data Scientist from Kampala, Uganda. My vision is to see every business (Profit/Non-profit) in Africa have a well developed data strategy. <br> <br> My pillars of success are based on Analytics, IT, Business and Communication"
+        content = "Hello, I’m a Data Scientist from Kampala, Uganda. My vision is to see every business (Profit/Non-profit) in Africa fully utilise their data to derive value and hence achieve desired growth. <br> <br> My pillars of success are based on Analytics, IT, Business and Communication"
         image   = "images/about/about.jpg"
 
     # Call to Action

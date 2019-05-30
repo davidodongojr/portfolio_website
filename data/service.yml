@@ -3,32 +3,32 @@ title   : MY CAPABILITIES
 subtitle: 
 image   : images/team.jpg
 serviceItem :
-  - icon  : ion-ios-lightbulb-outline
+  - icon  : ion-lightbulb
     title : Data Strategy.
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      Efficiently use your data to derive insights that can help you achieve your organisation's objectives and goals.
 
   - icon  : ion-stats-bars
     title : Data Analytics.
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      Make sense of the large amounts of data that you have as an organisation
 
   - icon  : ion-android-globe
-    title : Spatial Analysis.
+    title : Geospatial Analysis.
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      Understand the impact of your operations  from a geographical perspective.
 
   - icon  : ion-android-apps
     title : Data Management Systems.
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      Build data management systems that can help you obtain real-time data concerning your companies activities and efforts.
 
   - icon  : ion-university
     title : Capacity building.
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      Improve the analytical abilities of your staff through trainings specific to your organisational needs, and create a data-driven culture within your organisation.
   
   - icon  : ion-android-textsms
     title : Consulting.
     description : >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.
+      Consult me if you need assistance on Data mining, Survey design and analysis and any other operations in Data Science.
