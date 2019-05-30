@@ -12,22 +12,22 @@
                     {{ with .Site.Data.contact.contactFormTitle }}<h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">{{ . }}</h2>{{ end }}
                     {{ with .Site.Data.contact.contactFormSubtitle }}<p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">{{ . }}</p>{{ end }}
                     <div class="contact-form">
-                        <form id="contact-form" method="post" action="#" role="form">
+                        <form id="contact-form" method="POST" role="form">
 
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                                <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+                                <input type="text" name="name" placeholder="Your Name"  class="form-control" name="name" id="name">
                             </div>
 
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">
-                                <input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+                                <input type="email" name="_replyto" placeholder="Your Email"  class="form-control" name="email" id="email">
                             </div>
 
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                                <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+                                <input type="text" name="_subject" placeholder="Subject" class="form-control" name="subject" id="subject">
                             </div>
 
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
-                                <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
+                                <textarea rows="6" name="message" placeholder="Message" class="form-control" name="message" id="message"></textarea>
                             </div>
 
                             <div id="success" class="success">
@@ -85,6 +85,12 @@
         </div>
     </div>
 </section>
+
+<script>
+    var contactform =  document.getElementById('contactform');
+    contactform.setAttribute('action', '//formspree.io/' + 'davidodongojr' + '@' + 'gmail' + '.' + 'com');
+</script>
+
 {{ "<!-- Contact Section End -->" | safeHTML }}
 {{ end }}
 
