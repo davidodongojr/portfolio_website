@@ -1,7 +1,7 @@
 enable  : true
 title   : Services that i offer.
 subtitle: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, <br> quasi dolores numquam dolor vero ex, tempora commodi      repellendus quod laborum.
+  Consult me on any of the following.
 item    :
   - icon  : ion-ios-lightbulb-outline
     title : Data Strategy.
