@@ -6,10 +6,20 @@
     <description>Recent content on Data Scientist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Make beautiful graphs with R</title>
+      <link>/blog/make-beautiful-graphs-with-r/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/make-beautiful-graphs-with-r/</guid>
+      <description>Greetings to you my friend, today i would like to talk about how to make charts in R. We shall use the ggplot2 package which follows the rules of grammar of graphics.
+A grammar of graphics is a tool that enables us to concisely describe the components of a graphic. Such a grammar allows us to move beyond named graphics (e.g., the ``scatterplot’’) and gain insight into the deep structure that underlies statistical graphics</description>
+    </item>
     
     <item>
       <title>Reproducible Research with R</title>

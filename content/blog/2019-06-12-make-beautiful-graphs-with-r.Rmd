@@ -1,0 +1,78 @@
+---
+title: Make beautiful graphs with R
+author: David Odongo
+date: '2019-06-12'
+slug: make-beautiful-graphs-with-r
+categories:
+  - R
+  - Data Visualisation
+tags:
+  - ggplot2khhk
+  - bbplot
+  - dplyr
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, warning = F, message = F)
+```
+
+ Greetings to you my friend, today i would like to talk about how to make charts in R. We shall use the [`ggplot2`](https://ggplot2.tidyverse.org/) package which follows the rules of grammar of graphics.
+
+> A grammar of graphics is a tool that enables us to concisely describe the components of a graphic. Such a grammar allows us to move beyond named graphics (e.g., the ``scatterplot'') and gain insight into the deep structure that underlies statistical graphics
+
+We shall first start by loading the libraries we are going to use.
+
+```{r}
+#Load the libraries
+library(dplyr) # data wrangling and manipulation of the dataset
+library(ggplot2) # using the grammar of graphics to create charts
+library(bbplot) #using the beautiful standards bbc uses to develop it's graphics
+library(knitr) # pleasant looking tables (not its only use though)
+library(gameofthrones) #nice colour palletes based on Game of thrones series
+```
+
+We are going to use the diamonds dataset from the `ggplot2` package. We shall assign it to "raw_data"
+```{r }
+#load the dataset
+raw_data <- ggplot2::diamonds
+
+#inspect the dataset
+dim(raw_data)
+```
+
+This dataset has `r nrow(raw_data) ` rows and `r ncol(raw_data)` columns. 
+```{r}
+#look at the variables in the dataset
+dplyr::glimpse(raw_data)
+
+#look  at the first 5 rows of the dataset
+utils::head(raw_data) %>% knitr::kable()
+
+#look at the last 5 rows to make sure the data is consistent
+utils::tail(raw_data) %>% knitr::kable()
+```
+
+## visualise the data
+Let's now visualise the data to get an easier interpreation of the dataset
+
+```{r}
+# Histogram of price
+raw_data %>%  ggplot2::ggplot(aes(x = price, fill = cut)) +
+  geom_histogram()+
+  ggtitle("Price distribution by type of Cut")
+```
+
+As you can see, R has really beautiful graphics, but we can make this chart look even better by using the `bbplot` package and also choosing our colour pallete using the `gameof thrones` package
+
+```{r}
+# Histogram of price
+raw_data %>%  ggplot2::ggplot(aes(x = price, fill = cut)) +
+  ggplot2::geom_histogram(colour = 'white')+
+  ggplot2::ggtitle("Price distribution by type of Cut") +
+  gameofthrones::scale_fill_got_d(option = "Daenerys") +
+  ggplot2::geom_hline(yintercept = 0, size = 1, colour="#333333") +
+  ggplot2::scale_x_continuous(breaks = c(5000, 10000, 15000)) +
+  bbplot::bbc_style()
+```
+

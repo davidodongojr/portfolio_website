@@ -1,0 +1,254 @@
+---
+title: Make beautiful graphs with R
+author: David Odongo
+date: '2019-06-12'
+slug: make-beautiful-graphs-with-r
+categories:
+  - R
+  - Data Visualisation
+tags:
+  - ggplot2khhk
+  - bbplot
+  - dplyr
+---
+
+
+
+<p>Greetings to you my friend, today i would like to talk about how to make charts in R. We shall use the <a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a> package which follows the rules of grammar of graphics.</p>
+<blockquote>
+<p>A grammar of graphics is a tool that enables us to concisely describe the components of a graphic. Such a grammar allows us to move beyond named graphics (e.g., the ``scatterplot’’) and gain insight into the deep structure that underlies statistical graphics</p>
+</blockquote>
+<p>We shall first start by loading the libraries we are going to use.</p>
+<pre class="r"><code>#Load the libraries
+library(dplyr) # data wrangling and manipulation of the dataset
+library(ggplot2) # using the grammar of graphics to create charts
+library(bbplot) #using the beautiful standards bbc uses to develop it&#39;s graphics
+library(knitr) # pleasant looking tables (not its only use though)
+library(gameofthrones) #nice colour palletes based on Game of thrones series</code></pre>
+<p>We are going to use the diamonds dataset from the <code>ggplot2</code> package. We shall assign it to “raw_data”</p>
+<pre class="r"><code>#load the dataset
+raw_data &lt;- ggplot2::diamonds
+
+#inspect the dataset
+dim(raw_data)
+## [1] 53940    10</code></pre>
+<p>This dataset has 53940 rows and 10 columns.</p>
+<pre class="r"><code>#look at the variables in the dataset
+dplyr::glimpse(raw_data)
+## Observations: 53,940
+## Variables: 10
+## $ carat   &lt;dbl&gt; 0.23, 0.21, 0.23, 0.29, 0.31, 0.24, 0.24, 0.26, 0.22, ...
+## $ cut     &lt;ord&gt; Ideal, Premium, Good, Premium, Good, Very Good, Very G...
+## $ color   &lt;ord&gt; E, E, E, I, J, J, I, H, E, H, J, J, F, J, E, E, I, J, ...
+## $ clarity &lt;ord&gt; SI2, SI1, VS1, VS2, SI2, VVS2, VVS1, SI1, VS2, VS1, SI...
+## $ depth   &lt;dbl&gt; 61.5, 59.8, 56.9, 62.4, 63.3, 62.8, 62.3, 61.9, 65.1, ...
+## $ table   &lt;dbl&gt; 55, 61, 65, 58, 58, 57, 57, 55, 61, 61, 55, 56, 61, 54...
+## $ price   &lt;int&gt; 326, 326, 327, 334, 335, 336, 336, 337, 337, 338, 339,...
+## $ x       &lt;dbl&gt; 3.95, 3.89, 4.05, 4.20, 4.34, 3.94, 3.95, 4.07, 3.87, ...
+## $ y       &lt;dbl&gt; 3.98, 3.84, 4.07, 4.23, 4.35, 3.96, 3.98, 4.11, 3.78, ...
+## $ z       &lt;dbl&gt; 2.43, 2.31, 2.31, 2.63, 2.75, 2.48, 2.47, 2.53, 2.49, ...
+
+#look  at the first 5 rows of the dataset
+utils::head(raw_data) %&gt;% knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">carat</th>
+<th align="left">cut</th>
+<th align="left">color</th>
+<th align="left">clarity</th>
+<th align="right">depth</th>
+<th align="right">table</th>
+<th align="right">price</th>
+<th align="right">x</th>
+<th align="right">y</th>
+<th align="right">z</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.23</td>
+<td align="left">Ideal</td>
+<td align="left">E</td>
+<td align="left">SI2</td>
+<td align="right">61.5</td>
+<td align="right">55</td>
+<td align="right">326</td>
+<td align="right">3.95</td>
+<td align="right">3.98</td>
+<td align="right">2.43</td>
+</tr>
+<tr class="even">
+<td align="right">0.21</td>
+<td align="left">Premium</td>
+<td align="left">E</td>
+<td align="left">SI1</td>
+<td align="right">59.8</td>
+<td align="right">61</td>
+<td align="right">326</td>
+<td align="right">3.89</td>
+<td align="right">3.84</td>
+<td align="right">2.31</td>
+</tr>
+<tr class="odd">
+<td align="right">0.23</td>
+<td align="left">Good</td>
+<td align="left">E</td>
+<td align="left">VS1</td>
+<td align="right">56.9</td>
+<td align="right">65</td>
+<td align="right">327</td>
+<td align="right">4.05</td>
+<td align="right">4.07</td>
+<td align="right">2.31</td>
+</tr>
+<tr class="even">
+<td align="right">0.29</td>
+<td align="left">Premium</td>
+<td align="left">I</td>
+<td align="left">VS2</td>
+<td align="right">62.4</td>
+<td align="right">58</td>
+<td align="right">334</td>
+<td align="right">4.20</td>
+<td align="right">4.23</td>
+<td align="right">2.63</td>
+</tr>
+<tr class="odd">
+<td align="right">0.31</td>
+<td align="left">Good</td>
+<td align="left">J</td>
+<td align="left">SI2</td>
+<td align="right">63.3</td>
+<td align="right">58</td>
+<td align="right">335</td>
+<td align="right">4.34</td>
+<td align="right">4.35</td>
+<td align="right">2.75</td>
+</tr>
+<tr class="even">
+<td align="right">0.24</td>
+<td align="left">Very Good</td>
+<td align="left">J</td>
+<td align="left">VVS2</td>
+<td align="right">62.8</td>
+<td align="right">57</td>
+<td align="right">336</td>
+<td align="right">3.94</td>
+<td align="right">3.96</td>
+<td align="right">2.48</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>
+#look at the last 5 rows to make sure the data is consistent
+utils::tail(raw_data) %&gt;% knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">carat</th>
+<th align="left">cut</th>
+<th align="left">color</th>
+<th align="left">clarity</th>
+<th align="right">depth</th>
+<th align="right">table</th>
+<th align="right">price</th>
+<th align="right">x</th>
+<th align="right">y</th>
+<th align="right">z</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.72</td>
+<td align="left">Premium</td>
+<td align="left">D</td>
+<td align="left">SI1</td>
+<td align="right">62.7</td>
+<td align="right">59</td>
+<td align="right">2757</td>
+<td align="right">5.69</td>
+<td align="right">5.73</td>
+<td align="right">3.58</td>
+</tr>
+<tr class="even">
+<td align="right">0.72</td>
+<td align="left">Ideal</td>
+<td align="left">D</td>
+<td align="left">SI1</td>
+<td align="right">60.8</td>
+<td align="right">57</td>
+<td align="right">2757</td>
+<td align="right">5.75</td>
+<td align="right">5.76</td>
+<td align="right">3.50</td>
+</tr>
+<tr class="odd">
+<td align="right">0.72</td>
+<td align="left">Good</td>
+<td align="left">D</td>
+<td align="left">SI1</td>
+<td align="right">63.1</td>
+<td align="right">55</td>
+<td align="right">2757</td>
+<td align="right">5.69</td>
+<td align="right">5.75</td>
+<td align="right">3.61</td>
+</tr>
+<tr class="even">
+<td align="right">0.70</td>
+<td align="left">Very Good</td>
+<td align="left">D</td>
+<td align="left">SI1</td>
+<td align="right">62.8</td>
+<td align="right">60</td>
+<td align="right">2757</td>
+<td align="right">5.66</td>
+<td align="right">5.68</td>
+<td align="right">3.56</td>
+</tr>
+<tr class="odd">
+<td align="right">0.86</td>
+<td align="left">Premium</td>
+<td align="left">H</td>
+<td align="left">SI2</td>
+<td align="right">61.0</td>
+<td align="right">58</td>
+<td align="right">2757</td>
+<td align="right">6.15</td>
+<td align="right">6.12</td>
+<td align="right">3.74</td>
+</tr>
+<tr class="even">
+<td align="right">0.75</td>
+<td align="left">Ideal</td>
+<td align="left">D</td>
+<td align="left">SI2</td>
+<td align="right">62.2</td>
+<td align="right">55</td>
+<td align="right">2757</td>
+<td align="right">5.83</td>
+<td align="right">5.87</td>
+<td align="right">3.64</td>
+</tr>
+</tbody>
+</table>
+<div id="visualise-the-data" class="section level2">
+<h2>visualise the data</h2>
+<p>Let’s now visualise the data to get an easier interpreation of the dataset</p>
+<pre class="r"><code># Histogram of price
+raw_data %&gt;%  ggplot2::ggplot(aes(x = price, fill = cut)) +
+  geom_histogram()+
+  ggtitle(&quot;Price distribution by type of Cut&quot;)</code></pre>
+<p><img src="/blog/2019-06-12-make-beautiful-graphs-with-r_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>As you can see, R has really beautiful graphics, but we can make this chart look even better by using the <code>bbplot</code> package and also choosing our colour pallete using the <code>gameof thrones</code> package</p>
+<pre class="r"><code># Histogram of price
+raw_data %&gt;%  ggplot2::ggplot(aes(x = price, fill = cut)) +
+  ggplot2::geom_histogram(colour = &#39;white&#39;)+
+  ggplot2::ggtitle(&quot;Price distribution by type of Cut&quot;) +
+  gameofthrones::scale_fill_got_d(option = &quot;Daenerys&quot;) +
+  ggplot2::geom_hline(yintercept = 0, size = 1, colour=&quot;#333333&quot;) +
+  ggplot2::scale_x_continuous(breaks = c(5000, 10000, 15000)) +
+  bbplot::bbc_style()</code></pre>
+<p><img src="/blog/2019-06-12-make-beautiful-graphs-with-r_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
