@@ -7,7 +7,7 @@ categories:
   - R
   - Data Visualisation
 tags:
-  - ggplot2k
+  - ggplot2
   - bbplot
   - dplyr
 ---

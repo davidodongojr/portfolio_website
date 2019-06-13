@@ -17,7 +17,7 @@
       <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/blog/make-beautiful-graphs-with-r/</guid>
-      <description>Greetings to yu my friend, today i would like to talk abouthow to make charts in R. We shall use the ggplot2 package which follows the rules of grammar of graphics.
+      <description>Greetings to you my friend, today i would like to talk about how to make charts in R. We shall use the ggplot2 package which follows the rules of grammar of graphics.
 A grammar of graphics is a tool that enables us to concisely describe the components of a graphic. Such a grammar allows us to move beyond named graphics (e.g., the ``scatterplot’’) and gain insight into the deep structure that underlies statistical graphics</description>
     </item>
     
