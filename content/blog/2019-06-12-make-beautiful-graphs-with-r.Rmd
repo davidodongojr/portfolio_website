@@ -53,7 +53,9 @@ utils::head(raw_data) %>% knitr::kable()
 utils::tail(raw_data) %>% knitr::kable()
 ```
 
-## visualise the data
+
+## Visualise the data
+
 Let's now visualise the data to get an easier interpreation of the dataset
 
 ```{r}
@@ -63,7 +65,7 @@ raw_data %>%  ggplot2::ggplot(aes(x = price, fill = cut)) +
   ggtitle("Price distribution by type of Cut")
 ```
 
-As you can see, R has really beautiful graphics, but we can make this chart look even better by using the `bbplot` package and also choosing our colour pallete using the `gameof thrones` package
+As you can see, R has really beautiful graphics, but we can make this chart look even better by using the `bbplot` package and also choosing our colour pallete using the `gameofthrones` package
 
 ```{r}
 # Histogram of price

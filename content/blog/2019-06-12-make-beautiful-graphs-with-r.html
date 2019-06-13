@@ -234,14 +234,14 @@ utils::tail(raw_data) %&gt;% knitr::kable()</code></pre>
 </tbody>
 </table>
 <div id="visualise-the-data" class="section level2">
-<h2>visualise the data</h2>
+<h2>Visualise the data</h2>
 <p>Let’s now visualise the data to get an easier interpreation of the dataset</p>
 <pre class="r"><code># Histogram of price
 raw_data %&gt;%  ggplot2::ggplot(aes(x = price, fill = cut)) +
   geom_histogram()+
   ggtitle(&quot;Price distribution by type of Cut&quot;)</code></pre>
 <p><img src="/blog/2019-06-12-make-beautiful-graphs-with-r_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>As you can see, R has really beautiful graphics, but we can make this chart look even better by using the <code>bbplot</code> package and also choosing our colour pallete using the <code>gameof thrones</code> package</p>
+<p>As you can see, R has really beautiful graphics, but we can make this chart look even better by using the <code>bbplot</code> package and also choosing our colour pallete using the <code>gameofthrones</code> package</p>
 <pre class="r"><code># Histogram of price
 raw_data %&gt;%  ggplot2::ggplot(aes(x = price, fill = cut)) +
   ggplot2::geom_histogram(colour = &#39;white&#39;)+
